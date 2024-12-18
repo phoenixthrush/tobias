@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobias ist eine Nuss</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #nut {
+            width: 50vw;
+            border-radius: 15px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tobias <a href="index.html">is(s)t</a> eine Nuss</h1>
+    <img src="assets/eating.jpg" alt="Nut" id="nut">
+    <audio src="assets/meow.mp3" autoplay loop id="audio"></audio>
+    <p id="info">Click anywhere to play background audio.</p>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const text = document.getElementById('info');
+
+        addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+            }
+            text.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
